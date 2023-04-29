@@ -82,8 +82,14 @@ console.log(nameSum); // output should be 23
 
 //7. Write a function that takes two parameters, word and n, as arguments and returns the word concatenated to itself n number of times. 
 //(i.e. if I pass in ‘Hello’ and 3, I would expect the function to return ‘HelloHelloHello’).
+let word = "weird"
+let n = 3
 
+function  concatenatedWord(word, n) {
+    return word.repeat(n)
+};
 
+console.log(concatenatedWord(word, n));
 
 //8.  Write a function that takes two parameters, firstName and lastName, and returns a full name.  The full name should be the first and the last name separated by a space.
 
