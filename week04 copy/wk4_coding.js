@@ -161,7 +161,7 @@ console.log(willBuyDrink(isHotOutside, moneyInPocket));
 
 //13.  Create a function of your own that solves a problem. 
 let stake = 25
-let odds = -1100
+let odds = +1100
 
 
 function calculateProfit(odds, stake) {
