@@ -69,7 +69,6 @@
             return window.prompt(`
             0) exit
             1) Add Customer
-            2) View Customer
             3) Delete Customer
             4) Display Customers
             `);
@@ -84,31 +83,10 @@
         }
     
         createCustomer() {
-            let name = window.prompt(`What is your Name:`);
+            let name = window.prompt(`What is your Name and Coffee order:`);
             this.customers.push(new Customer(name));
         }
 
-        viewCustomer() {
-            let index = Number(prompt('Enter the index of the customer you would like to view:'));
-            if(index > -1 && index < this.customers.length) {
-                this.selectedCustomer = this.customers[index];
-                let description = 'Customer Name: ' + this.selectedCustomer.name + '\n';
-        
-                for (let i = 0; i < this.selectedCustomer.orders.length; i++) {
-                    description += i + ')' + this.selectedCustomer.orders[i].describe() + '\n';
-                }
-        
-                let selection = this.showCoffeeMenuOptions(this.selectedCustomer.orders);
-                switch(selection) {
-                    case '0':
-                        this.selectedCustomer = null;
-                        break;
-                    default:
-                        this.selectedCustomer.orders.splice(selection - 1, 1);
-                        break;
-                }
-            }
-        }      
     
         deleteCustomer() {
             let index = Number(prompt(`Enter the index of the Customer you would like to delete:`));
