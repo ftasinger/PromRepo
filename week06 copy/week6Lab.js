@@ -165,7 +165,7 @@ const movieCharacters = [
 
 function onlyWizards(arrayOfCharacters) {
   return arrayOfCharacters.filter((character) => 
-     character.isAWizaed == true)}
+     character.isAWizard == true)}
 
   
 
