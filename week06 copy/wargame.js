@@ -1,11 +1,11 @@
-class Card {
+class Card {                                 // creating an object called cards with 2 constructors
     constructor(suit, rank) {
       this.suit = suit;
       this.rank = rank;
       this.value = this.getValue();
     }
   
-    getValue() {
+    getValue() {                               // this is checking the rank of the cards and assigning a return value
       switch(this.rank) {
         case 'A':
           return 14;
@@ -21,18 +21,18 @@ class Card {
     }
   }
   
-  class Deck {
+  class Deck {                             // creating a new object with Deck information
     constructor() {
       this.cards = [];
       this.createDeck();
       this.shuffleDeck();
     }
   
-    createDeck() {
+    createDeck() {                                  //arrays created that hold suits and ranks
       const suits = ['hearts', 'diamonds', 'clubs', 'spades'];
       const ranks = ['A', '2', '3', '4', '5', '6', '7', '8', '9', '10', 'J', 'Q', 'K'];
-      for (let suit of suits) {
-        for (let rank of ranks) {
+      for (let suit of suits) {                         ////loop iterates over each suit in the array
+        for (let rank of ranks) {                      //loop iterates over each rank in the array
           this.cards.push(new Card(suit, rank));
         }
       }
