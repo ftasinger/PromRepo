@@ -8,11 +8,28 @@
 </head>
 <body>
     <h1> Contact</h1>
+    <style>
+        body {
+          background-color: black;
+          color: white;
+        }
+        div a {
+                color: white;
+            }
+
+            input[type="submit"] {
+    color: white;
+  }
+
+    a {
+        color: white;
+    }
+        </style>
 
     <div>
-        <a href="indexpract.html">Home</a>
-        <a href="contactpract.html">Contact</a>
-        <a href="aboutpract.html">About</a>
+           <a href="indexpract.html">Home</a>
+            <a href="aboutpract.html">Characters</a>
+            <a href="contactpract.html">Contact</a>
     </div>
     
     <table>
@@ -22,24 +39,34 @@
      </tr> <br><br>
      
      <tr>
-     <td> Wiki</td> 
-     <td><a href="https://en.wikipedia.org/wiki/Pedro_Pascal"> See my bio</a> </td>
+     <td> FaceBook</td> 
+     <td><a href="https://www.facebook.com/xmenmovies/"> Check Our Facebook</a> </td>
 
      </tr>
 
      <tr>
-        <td>imbd</td> 
-        <td><a href="https://www.imdb.com/name/nm0050959/">See my movies</a> </td>
+        <td>Cast</td> 
+        <td><a href="https://m.imdb.com/title/tt1877832/fullcredits/cast">See the Cast</a> </td>
      </tr>
 
     </table>
     
+<form onsubmit="playSound('https://www.101soundboards.com/sounds/27471-bye-bye-darlin.mp3')">
 <form>
-    <h2>Tell Us Who You Are</h2>
+    <h2>Sign Up For New X-Men Movie Notifications</h2>
     <input type="text" name="firstName" placeholder="First Name">
     <input type="text" name="email" placeholder="Email">
     <input type="submit" value="Submit">
+
+   
 </form>
+
+<script>
+    function playSound("https://www.101soundboards.com/sounds/27471-bye-bye-darlin") {
+      var audio = new Audio("https://www.101soundboards.com/sounds/27471-bye-bye-darlin");
+      audio.play();
+    }
+  </script>
 
 </body>
 </html>
