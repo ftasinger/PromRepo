@@ -138,7 +138,7 @@ of the elements on the page can help fix issues with spacing too, especially if 
 /* ---UNIVERSAL SELECTOR--- */
 /* OPTIONAL ↓ REMOVE COMMENTS TO SEE RED BORDER:*/
 
- {
+* {
   border: 1px solid red;
 }
 
@@ -148,8 +148,7 @@ html {
   font-family: Calibri, 'Trebuchet MS', sans-serif;
   background: linear-gradient(180deg, #84daf5, #89ffff, #affffa, #ffffff);
 }
-body {
-}
+
 
 h1 {
   text-align: center;
@@ -158,9 +157,7 @@ h2 {
   margin: 4rem auto 1rem auto;
   text-align: center;
 }
-p,
-li {
-}
+
 ol {
   padding: 20px;
 }
@@ -168,8 +165,7 @@ ol {
 ol li {
   padding: 10px 0;
 }
-img {
-}
+ 
 figcaption {
   text-align: center;
   font-weight: bold;
