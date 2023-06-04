@@ -4,13 +4,15 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Catch Them All</title>
     <link rel="stylesheet" type="text/css" href="node_modules/bootstrap/dist/css/bootstrap.css">
+    <link rel="stylesheet" href="index.css">
+
 
 </head>
-<body class="container">
-    <nav class="navbar navbar-expand-sm navbar-dark bg-dark">
-        <a class="navbar-brand" href="index.html">CodeProjex</a>
+<body class="container bg-light">
+    <nav class="navbar navbar-expand-sm navbar-dark bg-warning">
+        <a class="navbar-brand font-weight-bold" href="index.html">Choose Your Pokemon!</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-targer="#navbarNavDropdown" aria-controle="navbarNavDropdown"
              aria-expanded="false" aria_label="Toggle navigation">
 
@@ -19,114 +21,311 @@
          <div class="collapse navbar-collapse" id="navbarNavDropdown">
                 <ul class="navbar-nav">
                 <li class="nav-item active">
-                   <a class="nav-link" href="#">Home</a> 
+                   <a class="nav-link" href="index.html">Home</a> 
                 </li>    
                 <li class="nav-item">
-                    <a class="nav-link" href="#">About</a>
+                    <a class="nav-link" href="stats.html">Pokedex</a>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Request Info</a>
-                </li>
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown"
-                    aria-haspopup="true" aria-expanded="false">
-                        Dropdown
-                    </a>
-                    <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                        <a class="dropdown-item" href="#">Item One</a>
-                        <a class="dropdown-item" href="#">Item Two</a>
-                        <a class="dropdown-item" href="#">Item Three</a>
-                    </div>
-                </li>
+               
+                
                 </ul>
                
 
-         </div>
+        </div>
     </nav>
-   <div class="alert alert-primary">
-    Primary
-    </div>
-   
-    <div class="alert alert-secondary">
-    Secondary
+    <br><br>
+
+    <a href=#water button class="btn btn-primary">
+        Water</button></a>
+    
+    <a href=#fire button class="btn btn-danger">
+        Fire</button></a>
+    
+    <a href=#grass button class="btn btn-success">
+        Grass</button></a>
+    
+    <a href=#rock button class="btn btn-secondary">
+       Rock</button></a>
+    
+    <a href=#electric button class="btn btn-warning">
+        Electric</button></a>
+
+        <br><br>
+    
+
+   <div class="alert bg-primary text-light text-center rounded" id="water">
+        Water
     </div>
     
-    <div class="alert alert-success">
-    Success!!!
+    <div class="container text-center mb-5 fs-2">
+        <div class="row">
+          <div class="col-md ">
+            <div id="card-1" class="card bg-secondary" style="cursor: pointer;" onmouseover="this.style.boxShadow='0 0 5px rgba(0, 0, 0, 0.3)'; this.style.transform='scale(1.05)';" onmouseout="this.style.boxShadow='none'; this.style.transform='scale(1)';">
+              <img
+                src="https://assets.pokemon.com/assets/cms2/img/pokedex/full/007.png"
+                class="card-img-top"
+                alt="pokemon squirtle"
+                width="100"
+              />
+              <div class="card-body">
+                <h5 class="card-title">Squirtle</h5>
+                <a href="#grass" class="btn btn-success btn-lg">Weakness</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md ">
+            <div id="card-2" class="bg-secondary " style="cursor: pointer;" onmouseover="this.style.boxShadow='0 0 5px rgba(0, 0, 0, 0.3)'; this.style.transform='scale(1.05)';" onmouseout="this.style.boxShadow='none'; this.style.transform='scale(1)';">
+              <img
+                src="https://assets.pokemon.com/assets/cms2/img/pokedex/full/008.png"
+                class="card-img-top"
+                alt="pokemon wartortle"
+                width="100"
+              />
+              <div class="card-body">
+                <h5 class="card-title">Wartortle</h5>
+                <a href="#grass" class="btn btn-success btn-lg">Weakness</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md ">
+            <div id="card-3" class="bg-secondary " style="cursor: pointer;" onmouseover="this.style.boxShadow='0 0 5px rgba(0, 0, 0, 0.3)'; this.style.transform='scale(1.05)';" onmouseout="this.style.boxShadow='none'; this.style.transform='scale(1)';">
+              <img
+                src="https://assets.pokemon.com/assets/cms2/img/pokedex/full/009.png"
+                class="card-img-top"
+                alt="pokemon Blastoise."
+                width="100"
+              />
+              <div class="card-body">
+                <h5 class="card-title">Blastoise</h5>
+                <a href="#electric" class="btn btn-warning btn-lg">Weakness</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+   
+    <div class="alert bg-danger text-center text-light  rounded" role="alert" id="fire">
+      Fire
     </div>
+    <div class="container text-center mb-5 fs-2">
+        <div class="row">
+          <div class="col-md ">
+            <div id="card-1" class="card bg-secondary" style="cursor: pointer;" onmouseover="this.style.boxShadow='0 0 5px rgba(0, 0, 0, 0.3)'; this.style.transform='scale(1.05)';" onmouseout="this.style.boxShadow='none'; this.style.transform='scale(1)';">
+              <img
+                src="https://assets.pokemon.com/assets/cms2/img/pokedex/full/004.png"
+                class="card-img-top"
+                alt="pokemon charmander"
+                width="100"
+              />
+              <div class="card-body">
+                <h5 class="card-title">Charmander</h5>
+                <a href="#rock" class="btn btn-dark btn-lg">Weakness</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md ">
+            <div id="card-2" class="bg-secondary " style="cursor: pointer;" onmouseover="this.style.boxShadow='0 0 5px rgba(0, 0, 0, 0.3)'; this.style.transform='scale(1.05)';" onmouseout="this.style.boxShadow='none'; this.style.transform='scale(1)';">
+              <img
+                src="https://assets.pokemon.com/assets/cms2/img/pokedex/full/005.png"
+                class="card-img-top"
+                alt="pokemon Charmander"
+                width="100"
+              />
+              <div class="card-body">
+                <h5 class="card-title">Charmeleon</h5>
+                <a href="#water" class="btn btn-primary btn-lg">Weakness</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md ">
+            <div id="card-3" class="bg-secondary " style="cursor: pointer;" onmouseover="this.style.boxShadow='0 0 5px rgba(0, 0, 0, 0.3)'; this.style.transform='scale(1.05)';" onmouseout="this.style.boxShadow='none'; this.style.transform='scale(1)';">
+              <img
+                src="https://assets.pokemon.com/assets/cms2/img/pokedex/full/006.png"
+                class="card-img-top"
+                alt="pokemon Charizard."
+                width="100"
+              />
+              <div class="card-body">
+                <h5 class="card-title">Charizard</h5>
+                <a href="#electric" class="btn btn-warning text-light btn-lg">Weakness</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
     
-    <div class="alert alert-danger">
-    Danger!!!!!
-   </div>
-   
-   <div class="alert alert-warning">
-    Warning!!!
-   </div>
+    <div class="alert bg-success text-center text-light  rounded" role="alert" id="grass">
+    Grass
+    </div>
 
-   <button class="btn btn-primary">
-    Primary Button</button>
+    <div class="container text-center mb-5 fs-2">
+        <div class="row">
+          <div class="col-md ">
+            <div id="card-1" class="card bg-secondary" style="cursor: pointer;" onmouseover="this.style.boxShadow='0 0 5px rgba(0, 0, 0, 0.3)'; this.style.transform='scale(1.05)';" onmouseout="this.style.boxShadow='none'; this.style.transform='scale(1)';">
+              <img
+                src="https://assets.pokemon.com/assets/cms2/img/pokedex/full/001.png"
+                class="card-img-top"
+                alt="pokemon Bulbasaur"
+                width="100"
+              />
+              <div class="card-body">
+                <h5 class="card-title">Bulbasaur</h5>
+                <a href="#fire" class="btn btn-danger btn-lg">Weakness</a>
+              </div>
+            </div>
+          </div>
 
-    <button class="btn btn-secondary">
-    Secondary Button</button>
+          <div class="col-md ">
+            <div id="card-2" class="bg-secondary " style="cursor: pointer;" onmouseover="this.style.boxShadow='0 0 5px rgba(0, 0, 0, 0.3)'; this.style.transform='scale(1.05)';" onmouseout="this.style.boxShadow='none'; this.style.transform='scale(1)';">
+              <img
+                src="https://assets.pokemon.com/assets/cms2/img/pokedex/full/002.png"
+                class="card-img-top"
+                alt="pokemon wartortle"
+                width="100"
+              />
+              <div class="card-body">
+                <h5 class="card-title">Wartortle</h5>
+                <a href="#fire" class="btn btn-danger btn-lg">Weakness</a>
+              </div>
+            </div>
+          </div>
 
-    <button class="btn btn-success">
-    Success Button</button>
+          <div class="col-md ">
+            <div id="card-3" class="bg-secondary " style="cursor: pointer;" onmouseover="this.style.boxShadow='0 0 5px rgba(0, 0, 0, 0.3)'; this.style.transform='scale(1.05)';" onmouseout="this.style.boxShadow='none'; this.style.transform='scale(1)';">
+              <img
+                src="https://assets.pokemon.com/assets/cms2/img/pokedex/full/003.png"
+                class="card-img-top"
+                alt="pokemon venusaur."
+                width="100"
+              />
+              <div class="card-body">
+                <h5 class="card-title">Venusaur</h5>
+                <a href="#fire" class="btn btn-danger btn-lg">Weakness</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
 
-    <button class="btn btn-danger">
-    Danger Button</button>
+    <div class="alert bg-secondary text-center text-light  rounded" role="alert" id="rock">
+       Rock
+        </div>
 
-    <button class="btn btn-warning">
-    Warning Button</button>
-
-    <button class="btn btn-info">
-    Info Button</button>
-
-    <button class="btn btn-light">
-     Light Button</button>
+        <div class="container text-center mb-5 fs-2">
+            <div class="row">
+              <div class="col-md ">
+                <div id="card-1" class="card bg-secondary" style="cursor: pointer;" onmouseover="this.style.boxShadow='0 0 5px rgba(0, 0, 0, 0.3)'; this.style.transform='scale(1.05)';" onmouseout="this.style.boxShadow='none'; this.style.transform='scale(1)';">
+                  <img
+                    src="https://assets.pokemon.com/assets/cms2/img/pokedex/full/074.png"
+                    class="card-img-top"
+                    alt="pokemon geodude"
+                    width="100"
+                  />
+                  <div class="card-body">
+                    <h5 class="card-title">Geodude</h5>
+                    <a href="#water" class="btn btn-primary btn-lg">Weakness</a>
+                  </div>
+                </div>
+              </div>
     
-    <button class="btn btn-dark">
-   Dark Button</button>
+              <div class="col-md ">
+                <div id="card-2" class="bg-secondary " style="cursor: pointer;" onmouseover="this.style.boxShadow='0 0 5px rgba(0, 0, 0, 0.3)'; this.style.transform='scale(1.05)';" onmouseout="this.style.boxShadow='none'; this.style.transform='scale(1)';">
+                  <img
+                    src="https://assets.pokemon.com/assets/cms2/img/pokedex/full/075.png"
+                    class="card-img-top"
+                    alt="pokemon Graveler"
+                    width="100"
+                  />
+                  <div class="card-body">
+                    <h5 class="card-title">Graveler</h5>
+                    <a href="#grass" class="btn btn-success btn-lg">Weakness</a>
+                  </div>
+                </div>
+              </div>
+    
+              <div class="col-md ">
+                <div id="card-3" class="bg-secondary " style="cursor: pointer;" onmouseover="this.style.boxShadow='0 0 5px rgba(0, 0, 0, 0.3)'; this.style.transform='scale(1.05)';" onmouseout="this.style.boxShadow='none'; this.style.transform='scale(1)';">
+                  <img
+                    src="https://assets.pokemon.com/assets/cms2/img/pokedex/full/076.png"
+                    class="card-img-top"
+                    alt="pokemon Golem."
+                    width="100"
+                  />
+                  <div class="card-body">
+                    <h5 class="card-title">Golem</h5>
+                    <a href="#water" class="btn btn-warning text-light btn-lg">Weakness</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
 
-   <button type="button" class="btn btn-link">
-    Link
-    </button> <br><br>
+    <div class="alert bg-warning text-center text-light  rounded" role="alert" id="electric">
+    Electric
+    </div>
 
-    <button class="btn btn-info">
-        Notifications <span class="badge badge secondary">5</span>
-    </button>
+    <div class="container text-center mb-5 fs-2">
+        <div class="row">
+          <div class="col-md ">
+            <div id="card-1" class="card bg-secondary" style="cursor: pointer;" onmouseover="this.style.boxShadow='0 0 5px rgba(0, 0, 0, 0.3)'; this.style.transform='scale(1.05)';" onmouseout="this.style.boxShadow='none'; this.style.transform='scale(1)';">
+              <img
+                src="https://assets.pokemon.com/assets/cms2/img/pokedex/full/172.png"
+                class="card-img-top"
+                alt="pokemon pichu"
+                width="100"
+              />
+              <div class="card-body">
+                <h5 class="card-title">Pichu</h5>
+                <a href="#" class="btn btn-info btn-lg">Ground</a>
+              </div>
+            </div>
+          </div>
 
-    <h3> Invite Friends <span class="badge badge primary">NEW</span></h3>
+          <div class="col-md ">
+            <div id="card-2" class="bg-secondary " style="cursor: pointer;" onmouseover="this.style.boxShadow='0 0 5px rgba(0, 0, 0, 0.3)'; this.style.transform='scale(1.05)';" onmouseout="this.style.boxShadow='none'; this.style.transform='scale(1)';">
+              <img
+                src="https://assets.pokemon.com/assets/cms2/img/pokedex/full/025.png"
+                class="card-img-top"
+                alt="pokemon pikachu"
+                width="100"
+              />
+              <div class="card-body">
+                <h5 class="card-title">Pikachu</h5>
+                <a href="#" class="btn btn-info btn-lg">Ground</a>
+              </div>
+            </div>
+          </div>
 
-    <table class="table table-dark table-hover">
-        <tr>
-            <th>ID</th>
-            <th>Name</th>
-            <th>Email</th>
-        </tr>
+          <div class="col-md ">
+            <div id="card-3" class="bg-secondary " style="cursor: pointer;" onmouseover="this.style.boxShadow='0 0 5px rgba(0, 0, 0, 0.3)'; this.style.transform='scale(1.05)';" onmouseout="this.style.boxShadow='none'; this.style.transform='scale(1)';">
+              <img
+                src="https://assets.pokemon.com/assets/cms2/img/pokedex/full/026.png"
+                class="card-img-top"
+                alt="pokemon Raichu."
+                width="100"
+              />
+              <div class="card-body">
+                <h5 class="card-title">Raichu</h5>
+                <a href="#" class="btn btn-info text-light btn-lg">Ground</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    >
+   
 
-        <tr>
-            <td>1</td>
-            <td>Sam</td>
-            <td>sam@gmail.com</td>
-        </tr>
-
-        <tr>
-            <td>2</td>
-            <td>Tom</td>
-            <td>tom@gmail.com</td>
-        </tr>
-
-        <tr>
-            <td>3</td>
-            <td>Sally</td>
-            <td>sally@gmail.com</td>
-        </tr>
+    
 
    
 
-    </table>
+    
 
-   <script src="node_modules/jquery/dist/jquery.js"></script>
-   <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+  
 </body>
 </html>
