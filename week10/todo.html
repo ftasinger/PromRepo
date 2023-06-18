@@ -9,8 +9,22 @@
 </head>
 <body class="container">
     <br>
-    <img src="https://www.hrresolutions.com/wp-content/uploads/2017/05/vacation-time.jpg" alt="Picture of a calendar with Vacation time written on it" style="width: 100%; height: auto;">
-
+    <div id="image-container">
+        <img id="centered-image" src="https://www.hrresolutions.com/wp-content/uploads/2017/05/vacation-time.jpg" alt="Picture of a calendar with Vacation time written on it">
+      </div>
+      
+      <script>
+        window.addEventListener('DOMContentLoaded', function() {
+          var container = document.getElementById('image-container');
+          var image = document.getElementById('centered-image');
+          
+          container.style.display = 'flex';
+          container.style.justifyContent = 'center';
+          image.style.width = '60%';
+          image.style.height = '60%';
+        });
+      </script>
+      
     <div class="card">
         <div class="card-body">
             <div class="row">
@@ -34,11 +48,14 @@
                         <input type="text" class="form-control" id="new-task" placeholder="Name">
                     </div>
                 </div>
+                
             </div>
             <div>
                 <button id="add" class="btn btn-primary form-control">Create</button>
             </div>
-        </div>
+           
+            </div>
+            
     </div>
 
 
