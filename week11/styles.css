@@ -1,6 +1,7 @@
 
 body {
     background-color: black;
+    font-family: 'chalkduster', fantasy;
   }
   
   h1 {
@@ -42,7 +43,10 @@ body {
     display: none;
   }
   
-
+  .restart-button {
+    background-color: #007C80;
+    color: white;
+  }
   
   .restart-button:hover {
     background-color: #006669;
