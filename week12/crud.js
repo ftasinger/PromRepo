@@ -1,81 +1,114 @@
-class House {
-    constructor(name) {
-        this.name = name;
-        this.rooms = [];
-    }
-    
-    addRoom(name, area) {
-        this.rooms.push(new Room(name, area));
-    }
-}
+$(document).ready(function () {
+    const URL_ENDPOINT = 'https://64a106e40079ce56e2dac1a4.mockapi.io';
 
-class Room {
-    constructor(name, area) {
-        this.name = name;
-        this.area = area;
-    }
-}
+    function displayDonations() {
+        $.get(`${URL_ENDPOINT}/donation`).then(data => {
+            $('#list tbody').empty();
 
-class HouseService {
-    static url = 'https://ancient-taiga-31359/herokuapp.com/api/houses';
-
-    static getAllHouses() {
-        return $.get(this.url);
-    }
-    
-    static getHouse(id) {
-        return $.get(this.url + `/${id}`);
-    }
-    
-    static createHouse(house) {
-        return $.post(this.url, house);
-    }
-    
-    static updateHouse(house) {
-        return $.ajax({
-            url: this.url + `/${house._id}`,
-            dataType: 'json',
-            data: JSON.stringify(house),
-            contentType: 'application/json',
-            type: 'PUT'
         });
     }
-    
-    static deleteHouse(id) {
-        return $.ajax({
-            url: this.url + `/${id}`,
-            type: 'DELETE'
+
+})
+
+
+$.get(URL_ENDPOINT).then(data => {
+    data.map(donation => {
+        $('body').append(
+            $(`
+            <tr>
+                <td>${donation.id}</td>
+                <td>${donation.name}</td>
+                <td>${donation.donationDate}</td>
+                <td>${donation.amount}</td>
+                <td>${donation.paymentType}</td>
+                <td>${donation.note}</td>
+                <td><button id="deleteDonation" onclick="deleteDonation(${donation.id})" class="btn btn-danger">Delete</button>
+            </tr>`)
+        )
+    })
+})
+
+$('#addInfo').on('click', function (event) {
+    event.preventDefault();
+
+    const newDonation = {
+        name: $('#new-name').val(),
+        donationDate: $('#new-start-date').val(),
+        amount: $('#new-amount').val(),
+        paymentType: $('#new-payment').val(),
+        Note: $('#new-note').val()
+    };
+
+    $.post(`${URL_ENDPOINT}/donation`, newDonation)
+        .then(() => {
+            displayDonation();
+            clearForm();
+        })
+        .catch(error => {
+            console.error('Error adding donation:', error);
+        });
+});
+
+
+function deleteDonation(id) {
+    if (confirm('Are you sure you want to delete this donation?')) {
+        $.ajax({
+            url: `${URL_ENDPOINT}/donation/${id}`,
+            method: 'DELETE',
+            success: function () {
+                displayDonation();
+            },
+            error: function (error) {
+                console.error('Error deleting donation:', error);
+            }
         });
     }
 }
 
-class DOMManager {
-    static houses;
+function editDonation(id) {
+    $.get(`${URL_ENDPOINT}/donation/${id}`)
+        .then(data => {
+            $('#new-id').val(data.id);
 
-    static getAllHouses() {
-        HouseService.getAllHouses().then(houses => this.render(houses));
-    }
+})
 
-    static render(houses) {
-        this.houses = houses;
-        $('#app').empty();
-        for (let house of houses) {
-            $('#app').prepend(
-                `<div id="${house.id}" class="card">
-                    <div class="card-header">
-                        <h2>${house.name}</h2>
-                        <button class=" btn btn-danger" onclick=DOMManager.deleteHouse(`${house.id}`)">Delete</buttons>
-                    </div>
-                </div>`
-            );
+function updateDonation() {
+    let donationId = $('#new-id').val();
+
+ const updatedDonation = {
+        name: $('#new-name').val(),
+        donationDate: $('#new-start-date').val(),
+        amount: $('#new-amount').val(),
+        paymentType: $('#new-payment').val(),
+        Note: $('#new-note').val()
+    };
+
+    $.ajax({
+        url: `${URL_ENDPOINT}/donation/${donationId}`,
+        method: 'PUT',
+        data: updatedDonation,
+        success: function () {
+            displayDonations();
+            clearForm();
+        },
+        error: function (error) {
+            console.error('Error updating donation:', error);
         }
-    }
-}
+    });
+}};
 
+$('#updateInfo').on('click', function (event) {
+    event.preventDefault();
+    updateDonation();
+});
 
+function clearForm() {
+    $('#Id').val('');
+    $('#new-name').val('');
+    $('#new-start-date').val('');
+    $('#new-amount').val('');
+    $('#new-payment').val('');
+    $('#new-note').val('');
+};
 
-
-DOMManager.getAllHouses();
-
-
-
+$('#updateDonation').click(updateDonation)

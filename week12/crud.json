@@ -1,0 +1,13 @@
+
+{ 
+    "Donation Report": [
+{
+    "giverName": "John Smith",
+    "date": "2023-07-03",
+    "amount": 100.00,
+    "paymentType": "Credit Card",
+    "note": "Thank you for your generous contribution!"
+},
+    ]
+}
+  

@@ -2,31 +2,176 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>House App</title>
-
-
-    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.css">
+    <title>Donation Report</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD"
+      crossorigin="anonymous"
+    />
 </head>
-<body class="container">
-    <div id="new-house" class="jumbotron">
-        <h2>New House</h2>
+<body class="container bg bg-info">
+    <br>
 
-        <input type="text" id="new-house-name" class="form-control"> <br>
-        <button id="create-new-house" class="btn btn-primary form-control">Create</button>
-    </div>
-
-    <div id="app">
-
-
-
-     </div>
-     
-    <script src="node_modules/jquery/dist/jquery.min.js"></script>
-    <script src="crud.js"></script>
-    <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
-
-
+<form>
+   <style>
+    .text-center {
+        color: white;
+      } </style>
     
+    <div class="card bg bg-dark">
+       <div class="card-body">
+            <div class="row">
+                <img src="https://media.swncdn.com/cms/CW/Finances/52325-coins-1200.1200w.tn.jpg" alt="">
+                <h1 class="text-center" >Donation Report</h1> 
+                <div class="col-sm'">
+                    <div class="form-group">
+                        <label for="new-name">Name</label>
+                        <input type="text" class="form-control" id="new-name" placeholder="Giver's Name">
+                    </div>
+                </div>
+                <div class="col-sm">
+                    <div class="form-group">
+                        <label for="new-start-date">Donation Date</label>
+                        <input type="date" class="form-control" id="new-start-date">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm'">
+                        <div class="form-group">
+                            <label for="new-amount">Amount</label>
+                            <input type="text" class="form-control" id="new-amount" placeholder="Amount">
+                        </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm">
+                  <div class="form-group">
+                    <label for="new-payment">Payment Type</label>
+                    <select class="form-control" id="new-payment">
+                      <option value="check">Check</option>
+                      <option value="cash">Cash</option>
+                      <option value="credit">Credit</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-sm'">
+                    <div class="form-group">
+                        <label for="new-note">Note</label>
+                        <input type="text" class="form-control" id="new-note" placeholder="Note">
+                    </div>
+                </div>
+            </div><br><br>
+            <div>
+                <button type="submit" value="Submit" id="addInfo" class="btn btn-light">Add Info</button>
+            </div>
+       </div>
+    </div>
+</form>    
+
+<br><br>
+
+<form>
+    <div class="card bg bg-light">
+       <div class="card-body">
+            <div class="row">
+                <div class="col-sm'">
+                    <div class="form-group">
+                        <label for="new-id">Id</label>
+                        <input type="text" class="form-control" id="new-id" placeholder="Enter Id #">
+                    </div>
+                </div>
+                <div class="col-sm'">
+                    <div class="form-group">
+                        <label for="new-name">Name</label>
+                        <input type="text" class="form-control" id="new-name" placeholder="Giver's Name">
+                    </div>
+                </div>
+                <div class="col-sm">
+                    <div class="form-group">
+                        <label for="new-start-date">Donation Date</label>
+                        <input type="date" class="form-control" id="new-start-date">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm'">
+                        <div class="form-group">
+                            <label for="new-amount">Amount</label>
+                            <input type="text" class="form-control" id="amount" placeholder="Amount">
+                        </div>
+                    <div class="row">
+                        <div class="col-sm">
+                          <div class="form-group">
+                            <label for="new-payment">Payment Type</label>
+                            <select class="form-control" id="new-payment">
+                              <option value="check">Check</option>
+                              <option value="cash">Cash</option>
+                              <option value="credit">Credit</option>
+                            </select>
+                          </div>
+                        </div>
+                      </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm'">
+                    <div class="form-group">
+                        <label for="new-number">Note</label>
+                        <input type="text" class="form-control" id="new-note" placeholder="Note">
+                    </div>
+                </div>
+            </div><br>
+            <div>
+                <button type="submit" value="Submit" id="updateInfo" class="btn btn-dark">Update Info</button>
+            </div>
+       </div>
+    </div>
+</form>
+
+
+
+<div class="container">
+    <table id="list" class="table table-light table-striped">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Donation Date</th>
+                <th>Payment Type</th>
+                <th>Amount</th>
+                <th>Note</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr></tr>
+        </tbody>
+    </table>
+
+
+    <!-- Jquery CDN  -->
+    <script
+      src="https://code.jquery.com/jquery-3.6.3.min.js"
+      integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU="
+      crossorigin="anonymous"
+    ></script>
+    <!-- Popper CDN: For dropdowns, popovers, tooltips, etc-->
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+      integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3"
+      crossorigin="anonymous"
+    ></script>
+    <!-- Bootstrap Script CDN -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+      crossorigin="anonymous"
+    ></script>
+  
+    <script src="https://code.jquery.com/jquery-3.6.3.min.js"></script>
+ <script src="crud.js"></script>
 </body>
 </html>
