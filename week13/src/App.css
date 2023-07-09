@@ -1,0 +1,41 @@
+html{
+    padding: 0%;
+}
+
+nav{
+    width: 100vw;
+    background-color: rgb(55, 7, 92);
+    font-size: 24px;
+    color:white;
+    padding: 5px;
+    
+}
+
+nav ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: right;
+}
+
+nav ul li {
+    list-style-type: none;
+    margin-right: 1em;
+
+}
+
+nav ul li:hover{
+    color: rgba(172, 240, 14, 0.916);
+    
+}
+
+nav ul li:active {
+    background-color: rgb(128, 0, 83);
+}
+
+.welcomeSection {
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    background-color: #b7b3b3;
+    padding: 1em;
+};
