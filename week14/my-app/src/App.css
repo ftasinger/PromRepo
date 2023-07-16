@@ -1,9 +1,10 @@
 
 body {
-  font-family: Arial, sans-serif;
+  font-family: arial, sans-serif;
   margin: 0;
   padding: 0;
   background: linear-gradient(45deg, #ff0000, #ff4500, #ff7f00, #ffa500, #ffd700);
+  color: white;
 }
 
 
@@ -24,20 +25,49 @@ body {
 }
 
 .movie {
-  border: 1px solid red; /* Add this line to set the red border for the movie cards */
-  padding: 10px;
+  border: 1px solid rgb(255, 255, 255); 
   margin: 10px;
-  width: 200px;
-  background-color: white; /* Optionally, add this line to set the card background to white */
+  width: 220px;
+  position: relative;
+  display: inline-block;
+  vertical-align: top;
+  background-color: rgb(60, 60, 62); 
 }
 
 .movie h2 {
   margin-bottom: 10px;
+  height: 2.5em;
+  overflow: hidden;
+}
+
+.movie img {
+  width: 100%;
+  height: 250px;
+  object-fit: contain;
+  transition: transform 1s ease;
+}
+
+
+.movie:hover img {
+  animation: revolveOnAxis 2s linear;
+}
+
+@keyframes revolveOnAxis {
+  0% {
+    transform: rotateY(0deg);
+  }
+  50% {
+    transform: rotateY(180deg);
+  }
+  100% {
+    transform: rotateY(360deg);
+  }
 }
 
 
 h1 {
   margin-bottom: 20px;
+  letter-spacing: 5px;
 }
 
 img {
@@ -51,9 +81,9 @@ img {
 }
 
 .review {
-  border: 1px solid #ddd;
+  border: 1px solid white;
   padding: 10px;
-  margin: 5px;
+  margin: 21px;
 }
 
 .star {
@@ -67,24 +97,37 @@ img {
 }
 
 .review-form {
-  margin-top: 20px;
+  margin-top: 10px;
+  
 }
 
 textarea {
-  width: 100%;
+  width: 99;
   resize: vertical;
   padding: 5px;
 }
 
-button {
-  margin-top: 10px;
-  padding: 8px 12px;
-  background-color: #007bff;
-  color: #ffffff;
-  border: none;
-  cursor: pointer;
-}
 
 button:hover {
   background-color: #000204;
 }
+
+.submit-button {
+  margin-top: 20px;
+  padding: 12px 12px;
+  background: linear-gradient(45deg, #ff0000, #ff4500, #ff7f00, #ffa500, #ffd700);
+  color: #fff;
+  border: none;
+  cursor: pointer;
+}
+
+.submit-button:hover {
+  
+  background: linear-gradient(45deg, #ff4500, #ff7f00, #ffa500, #ffd700, #ff0000);
+}
+
+
+
+
+
+

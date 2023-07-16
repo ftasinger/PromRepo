@@ -22,7 +22,7 @@ const ReviewForm = ({ movieId }) => {
         value={reviewText}
         onChange={(event) => setReviewText(event.target.value)}
       />
-      <button type="submit">Submit Review</button>
+      <button type="submit" className="submit-button">Submit Review</button>
     </form>
   );
 };
