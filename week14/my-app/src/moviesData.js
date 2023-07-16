@@ -16,6 +16,42 @@ const moviesData = [
       rating: 4.0,
       reviews: ['So funny!', 'Classic teen movie.'],
     },
+    {
+        id: 3,
+        title: 'Matrix',
+        image:
+          'https://m.media-amazon.com/images/M/MV5BNzQzOTk3OTAtNDQ0Zi00ZTVkLWI0MTEtMDllZjNkYzNjNTc4L2ltYWdlXkEyXkFqcGdeQXVyNjU0OTQ0OTY@._V1_.jpg',
+        synopsis: 'A computer hacker learns from mysterious rebels about the true nature of his reality and his role in the war against its controllers.',
+        rating: 4.8,
+        reviews: ['Mind Trip', 'Action Packed'],
+      },
+      {
+        id: 4,
+        title: 'The Hot Chick',
+        image:
+          'https://upload.wikimedia.org/wikipedia/en/8/83/The_Hot_Chick_poster.jpg',
+        synopsis: 'A popular teenager, who is mean-spirited toward others, finds herself in the body of an older man, and must find a way to get back to her original body.',
+        rating: 3.9,
+        reviews: ['So funny',  'Freaky Friday'],
+      },
+      {
+        id: 5,
+        title: 'Black Panther',
+        image:
+          'https://lumiere-a.akamaihd.net/v1/images/pp_disney_blackpanther_wakandaforever_1289_d3419b8f.jpeg',
+        synopsis: 'T\'Challa, heir to the hidden kingdom of Wakanda, must step forward to lead his people into a new future and must confront a challenger from his country\'s past.',
+        rating: 5.0,
+        reviews: ['Sad but great movie', 'Relateable'],
+      },
+      {
+        id: 7,
+        title: 'Star Wars: A New Hope',
+        image: 'https://m.media-amazon.com/images/M/MV5BMDljNTQ5ODItZmQwMy00M2ExLTljOTQtZTVjNGE2NTg0NGIxXkEyXkFqcGdeQXVyODkzNTgxMDg@._V1_FMjpg_UX1000_.jpg',
+        synopsis: 'Luke Skywalker joins forces with a Jedi Knight, a cocky pilot, a Wookiee, and two droids to save the galaxy from the Empire\'s world-destroying battle station.',
+        rating: 4.7,
+        reviews: ['Amazing', 'My favorite'],
+      },
+  
   ];
   
   export default moviesData;

@@ -1,4 +1,4 @@
-// src/Stars.js
+
 import React from 'react';
 
 const Stars = ({ rating }) => {
