@@ -1,53 +1,21 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-
 
 body {
   font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
+  background: linear-gradient(45deg, #ff0000, #ff4500, #ff7f00, #ffa500, #ffd700);
 }
+
+
+
+
 
 .App {
   text-align: center;
   padding: 20px;
 }
+
+
 
 .movie-list {
   display: flex;
@@ -56,11 +24,17 @@ body {
 }
 
 .movie {
-  border: 1px solid #ddd;
+  border: 1px solid red; /* Add this line to set the red border for the movie cards */
   padding: 10px;
   margin: 10px;
   width: 200px;
+  background-color: white; /* Optionally, add this line to set the card background to white */
 }
+
+.movie h2 {
+  margin-bottom: 10px;
+}
+
 
 h1 {
   margin-bottom: 20px;
@@ -68,8 +42,8 @@ h1 {
 
 img {
   width: 100%;
-  height: 250px;
-  object-fit: cover;
+  height: 300px;
+  object-fit: flex;
 }
 
 .review-list {
@@ -106,11 +80,11 @@ button {
   margin-top: 10px;
   padding: 8px 12px;
   background-color: #007bff;
-  color: #fff;
+  color: #ffffff;
   border: none;
   cursor: pointer;
 }
 
 button:hover {
-  background-color: #0056b3;
+  background-color: #000204;
 }

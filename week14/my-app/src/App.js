@@ -1,14 +1,13 @@
 
-import './App.css';
 import React from 'react';
-import MovieList from './MovieList.js';
-
+import './App.css';
+import MovieList from './MovieList';
 
 function App() {
   return (
     <div className="App">
       <h1>Movie Reviews</h1>
-      <MovieList/>
+      <MovieList />
     </div>
   );
 }

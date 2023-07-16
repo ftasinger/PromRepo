@@ -1,5 +1,6 @@
+// src/MovieList.js
 import React from 'react';
-import Movie from './App';
+import Movie from './Movie';
 import moviesData from './moviesData';
 
 const MovieList = () => {
