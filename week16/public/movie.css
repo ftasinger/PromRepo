@@ -1,0 +1,429 @@
+
+
+/* Navigation bar styles with background image */
+.navbar {
+    background-color: #2c3e50; /* Fallback color */
+    background-image: url('https://mcdn.wallpapersafari.com/medium/80/17/DP74wI.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 10px;
+    color: white;
+  }
+  
+  /* Navigation links */
+  .navbar-nav {
+    list-style: none;
+    display: flex; /* Display the links side by side */
+    align-items: center; /* Align links vertically center in the navbar */
+  }
+  
+  .navbar-nav li {
+    padding: 0 10px; /* Add some space between the links */
+  }
+  
+  .navbar-nav a {
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    padding: 10px;
+    position: relative;
+    font-size: 20px;
+  }
+
+  .navbar-nav a:hover {
+    color: red;
+  }
+
+  .navbar-nav a::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    opacity: 0.5; /* Adjust opacity to control the darkness */
+    z-index: -1; /* Send the black blocking behind the text */
+    
+  }
+  
+ 
+  
+  /* Navigation bar toggle button styles */
+  .navbar-toggle {
+    cursor: pointer;
+    background: transparent;
+    border: none;
+  }
+  
+  .navbar-toggle span {
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px;
+    background-color: white;
+  }
+  
+  /* Show the nav links when the toggle button is clicked */
+  .show-nav {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background-color: #2c3e50;
+  }
+  
+  .show-nav li {
+    text-align: center;
+  }
+  
+  /* Media query for collapsing behavior */
+  @media screen and (max-width: 768px) {
+    .navbar-nav {
+      display: none; /* Hide the nav links by default on smaller screens */
+      flex-direction: column;
+      padding: 10px;
+    }
+  
+    .navbar-nav li {
+      padding: 5px 0;
+    }
+  
+    .navbar-toggle {
+      display: block; /* Display the toggle button on smaller screens */
+    }
+  
+    .show-nav {
+      display: flex; /* Show the nav links when the toggle button is clicked */
+      position: relative;
+    }
+  
+    .xmen-image {
+      width: 100%; /* Adjust image width to occupy full width when collapsed */
+      height: 100vh;
+    }
+  }
+  
+  /* Set image width to 100% for fully expanded page */
+  .xmen-image {
+    width: 100%;
+  }
+
+  
+  
+  
+  
+  
+  
+  
+  /* Navigation bar toggle button styles */
+  .navbar-toggle {
+    cursor: pointer;
+    background: transparent;
+    border: none;
+  }
+  
+  .navbar-toggle span {
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px;
+    background-color: white;
+  }
+  
+  /* Show the nav links when the toggle button is clicked */
+  .show-nav {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background-color: #2c3e50;
+  }
+  
+  .show-nav li {
+    text-align: center;
+  }
+  
+  /* Media query for collapsing behavior */
+  @media screen and (max-width: 768px) {
+    .navbar-nav {
+      display: none; /* Hide the nav links by default on smaller screens */
+      flex-direction: column;
+      padding: 10px;
+    }
+  
+    .navbar-nav li {
+      padding: 5px 0;
+    }
+  
+    .navbar-toggle {
+      display: block; /* Display the toggle button on smaller screens */
+    }
+  
+    .show-nav {
+      display: flex; /* Show the nav links when the toggle button is clicked */
+      position: relative;
+    }
+  
+    .xmen-image {
+        width: 100%; /* Adjust image width to occupy full width when collapsed */
+      }
+    }
+    
+    /* Set image width to 100% for fully expanded page */
+    .xmen-image {
+      width: 100%;
+    }
+  
+
+  
+  
+  /* Media query for collapsing behavior */
+  @media screen and (max-width: 768px) {
+    .navbar-nav {
+      display: none; /* Hide the nav links by default on smaller screens */
+      flex-direction: column;
+      padding: 10px;
+    }
+  
+    .navbar-nav li {
+      padding: 5px 0;
+    }
+  
+    .navbar-toggle {
+      display: block; /* Display the toggle button on smaller screens */
+    }
+  
+    .show-nav {
+      display: flex; /* Show the nav links when the toggle button is clicked */
+    }
+  }
+ 
+  /*PLOT*/
+
+  h2 {
+    text-align: center;
+  }
+
+  .xmen-content {
+    text-align: center;
+  }
+
+  .plot-table {
+    margin: 20px auto; /* Center the table */
+    border-collapse: collapse; /* Combine cell borders */
+    border-image-source: url('https://mcdn.wallpapersafari.com/medium/80/17/DP74wI.jpg'); /* Image for the border */
+    border-image-slice: 50; /* Adjust the slicing of the border image */
+    border-image-width: 10px; /* Width of the border image */
+    border-image-repeat: repeat; /* Repeat the border image */
+  }
+  
+
+/*Trailers*/
+
+.trailers-table {
+    width: 100%; /* Adjust the width as per your requirement */
+    margin: 0 auto; /* Center the table */
+    border-collapse: collapse; /* Combine cell borders */
+    border: 1px solid #ccc; /* Lighter border color */
+    background-color: #5a5a5a; /* Lighter background color */
+    box-shadow: 1 100px 100px rgba(254, 251, 251, 0.1); /* Shadow effect */
+    padding: 10px; /* Add some padding to the table */
+    table-layout: fixed;
+  }
+  
+  .trailers-cell {
+    text-align: center;
+    padding: 10px;
+  }
+
+  @media screen and (max-width: 768px) {
+    .trailers-table-container {
+      flex-direction: column; /* Stack trailers one below the other */
+    }
+  
+    .trailers-table {
+      width: 100%; /* Make the trailers take full width on smaller screens */
+    }
+  
+    .trailers-cell {
+      display: block; /* Change display to block to stack videos one below the other */
+      margin-bottom: 20px; /* Add some margin between stacked videos */
+    }
+  }
+  
+  .Trailers {
+    width: 45%; /* Adjust the width as per your preference */
+    margin-bottom: 20px; /* Add some space between trailers */
+  }
+  
+  .Trailers iframe {
+    width: 100%; /* Make the trailers take up their full width */
+    height: 100%; /* Make the trailers take up their full height */
+  }
+  
+  .trailers-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    height: 100%; /* Add this line */
+  }
+  
+
+  /* Your existing styles for body, div a, .trailers-container, etc. */
+  
+  body {
+    background-color: black;
+    color: white;
+  }
+  
+  div a {
+    color: white;
+  }
+  
+  .trailers-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  
+  .trailers-container .trailer {
+    width: 5%;
+    margin-bottom: 5px;
+  }
+  
+  /* Custom cursor */
+  body {
+    cursor: url('../claw_scratch.png'), auto;
+  }
+  
+  
+  
+  /* Contact */
+
+  form input[type="submit"] {
+    background-color: maroon;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 4px;
+  }
+
+  table {
+    width: 80%; /* Adjust the width as per your requirement */
+    margin: 20px auto; /* Center the table */
+    border-collapse: collapse; /* Combine cell borders */
+    border: 2px solid white; /* White border around the table */
+  }
+  
+  table th, table td {
+    border: 1px solid white; /* White border for table cells */
+    padding: 10px; /* Add some padding to cells */
+    text-align: center;
+  }
+  
+  /* Keep table links white even after clicked */
+  table a {
+    color: white;
+    text-decoration: none;
+  }
+  
+  table a:visited {
+    color: white;
+  }
+
+  table a:hover {
+    /* Set the link color to red when hovered */
+    color: red;
+  }
+
+  
+  /*Characters*/
+  .character-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; /* Horizontally center the cards */
+    align-items: center; /* Vertically center the cards */
+  }
+  
+  body {
+    background-color: black;
+    color: white;
+  }
+  
+  div a {
+    color: white;
+  }
+  
+  .character {
+    float: left;
+    margin: 10px;
+    text-align: center;
+    position: relative;
+    cursor: pointer;
+    width: 300px; /* Add a fixed width to the character card */
+    height: 300px; /* Add a fixed height to the character card */
+    background-color: transparent; /* Set the initial background color to transparent */
+    transition: background-color 0.5s; /* Add transition for background-color change */
+  }
+  
+  .character img {
+    height: 100%; /* Make the image take up the full height of the card */
+    width: 100%; /* Make the image take up the full width of the card */
+  }
+  
+  .character h3 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0; /* Set opacity to 0 to initially hide the text */
+    background-color: rgba(0, 0, 0, 0.8); /* Set background color with some transparency to create the black effect */
+    color: white;
+    padding: 20px;
+    font-size: 18px;
+    text-align: center;
+    transition: opacity 0.5s;
+    backface-visibility: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+  }
+  
+  /* Add hover effect */
+  .character:hover {
+    background-color: black; /* Set the background color to black on hover */
+  }
+
+  
+  .character:hover h3 {
+    opacity: 1; /* Set opacity to 1 on hover to show the text */
+  }
+  
+  header {
+    text-align: center;
+    margin: 20px 0;
+  }
+  
+  /* Media queries */
+  @media (max-width: 768px) {
+    /* Center characters when the screen size is 768px or smaller */
+    .character-container {
+      justify-content: center;
+    }
+  }
+      
+      
+      
+      
+      
