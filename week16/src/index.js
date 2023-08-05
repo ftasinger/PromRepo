@@ -29,10 +29,11 @@ function playMetalSound() {
   const dataTable = document.getElementById('data-table');
 
   // Function to handle form submission
-  contactForm.addEventListener('submit', (event) => {
-    event.preventDefault();
+  contactForm.addEventListener('submit', (event) = {
+    event.preventDefault() 
+  };
 
-    const firstName = contactForm.elements['firstName'].value;
+    const firstName = contactForm.elements ['firstName'].value;
     const lastName = contactForm.elements['lastName'].value;
     const email = contactForm.elements['email'].value;
 
@@ -47,7 +48,7 @@ function playMetalSound() {
 
     // Reset the form fields after submission
     contactForm.reset();
-  });
+  );
 </script>
 
 

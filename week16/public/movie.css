@@ -229,7 +229,7 @@
 /*Trailers*/
 
 .trailers-table {
-    width: 100%; /* Adjust the width as per your requirement */
+    width: 100%; /* Adjust the width  */
     margin: 0 auto; /* Center the table */
     border-collapse: collapse; /* Combine cell borders */
     border: 1px solid #ccc; /* Lighter border color */
@@ -273,11 +273,11 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    height: 100%; /* Add this line */
+    height: 100%; 
   }
   
 
-  /* Your existing styles for body, div a, .trailers-container, etc. */
+
   
   body {
     background-color: black;
@@ -299,7 +299,7 @@
     margin-bottom: 5px;
   }
   
-  /* Custom cursor */
+  /* Custom cursor (didn't work :( )*/
   body {
     cursor: url('../claw_scratch.png'), auto;
   }
@@ -351,8 +351,8 @@
   .character-container {
     display: flex;
     flex-wrap: wrap;
-    justify-content: center; /* Horizontally center the cards */
-    align-items: center; /* Vertically center the cards */
+    justify-content: center;
+    align-items: center;
   }
   
   body {
@@ -370,15 +370,15 @@
     text-align: center;
     position: relative;
     cursor: pointer;
-    width: 300px; /* Add a fixed width to the character card */
-    height: 300px; /* Add a fixed height to the character card */
-    background-color: transparent; /* Set the initial background color to transparent */
-    transition: background-color 0.5s; /* Add transition for background-color change */
+    width: 300px;
+    height: 300px;
+    background-color: transparent;
+    transition: background-color 0.5s;
   }
   
   .character img {
-    height: 100%; /* Make the image take up the full height of the card */
-    width: 100%; /* Make the image take up the full width of the card */
+    height: 100%;
+    width: 100%;
   }
   
   .character h3 {
@@ -386,8 +386,8 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    opacity: 0; /* Set opacity to 0 to initially hide the text */
-    background-color: rgba(0, 0, 0, 0.8); /* Set background color with some transparency to create the black effect */
+    opacity: 0;
+    background-color: rgba(0, 0, 0, 0.8);
     color: white;
     padding: 20px;
     font-size: 18px;
@@ -400,19 +400,10 @@
     box-sizing: border-box;
   }
   
-  /* Add hover effect */
-  .character:hover {
-    background-color: black; /* Set the background color to black on hover */
-  }
-
+ 
   
-  .character:hover h3 {
-    opacity: 1; /* Set opacity to 1 on hover to show the text */
-  }
-  
-  header {
-    text-align: center;
-    margin: 20px 0;
+  .character:hover .character-description {
+    display: block;
   }
   
   /* Media queries */
@@ -422,6 +413,8 @@
       justify-content: center;
     }
   }
+ 
+
       
       
       
