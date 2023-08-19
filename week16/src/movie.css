@@ -14,17 +14,17 @@
   }
   
   /* Navigation links */
-  .navbar-nav {
+  .navbar {      /*navbar-nav*/
     list-style: none;
     display: flex; /* Display the links side by side */
     align-items: center; /* Align links vertically center in the navbar */
   }
   
-  .navbar-nav li {
+  .navbar li {  /*navbar-nav*/
     padding: 0 10px; /* Add some space between the links */
   }
   
-  .navbar-nav a {
+  .navbar a {  /*navbar-nav*/
     color: rgb(255, 255, 255);
     text-decoration: none;
     padding: 10px;
@@ -32,11 +32,11 @@
     font-size: 20px;
   }
 
-  .navbar-nav a:hover {
+  .navbar a:hover {  /*navbar-nav*/
     color: red;
   }
 
-  .navbar-nav a::before {
+  .navbar a::before {  /*navbar-nav*/
     content: "";
     position: absolute;
     top: 50%;
@@ -53,7 +53,7 @@
  
   
   /* Navigation bar toggle button styles */
-  .navbar-toggle {
+  .navbar-toggle {  
     cursor: pointer;
     background: transparent;
     border: none;
@@ -84,13 +84,13 @@
   
   /* Media query for collapsing behavior */
   @media screen and (max-width: 768px) {
-    .navbar-nav {
+    .navbar{
       display: none; /* Hide the nav links by default on smaller screens */
       flex-direction: column;
       padding: 10px;
     }
   
-    .navbar-nav li {
+    .navbar li {
       padding: 5px 0;
     }
   
@@ -153,13 +153,13 @@
   
   /* Media query for collapsing behavior */
   @media screen and (max-width: 768px) {
-    .navbar-nav {
+    .navbar {
       display: none; /* Hide the nav links by default on smaller screens */
       flex-direction: column;
       padding: 10px;
     }
   
-    .navbar-nav li {
+    .navbar li {
       padding: 5px 0;
     }
   
@@ -187,13 +187,13 @@
   
   /* Media query for collapsing behavior */
   @media screen and (max-width: 768px) {
-    .navbar-nav {
+    .navbar {
       display: none; /* Hide the nav links by default on smaller screens */
       flex-direction: column;
       padding: 10px;
     }
   
-    .navbar-nav li {
+    .navbar li {
       padding: 5px 0;
     }
   
@@ -299,10 +299,7 @@
     margin-bottom: 5px;
   }
   
-  /* Custom cursor (didn't work :( )*/
-  body {
-    cursor: url('../claw_scratch.png'), auto;
-  }
+  
   
   
   
@@ -415,7 +412,17 @@
   }
  
 
-      
+  .contact-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh; /* Set the container's height to the full viewport height */
+    background-color: #080707; /* Optional: Add a background color */
+  }
+  
+  /* ... (rest of your existing CSS code) */
+  
       
       
       
