@@ -15,7 +15,7 @@ function Home() {
 
       {/* Plot Table */}
       <h2><u>Plot</u></h2>
-      <table className="plot-table">
+      <table className="plot-table plot-hover" >
         <tbody>
           <tr>
             <td>
