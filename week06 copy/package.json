@@ -1,6 +1,6 @@
 {
   "dependencies": {
-    "mocha": "^10.2.0"
+    "mocha": "^11.0.1"
   },
   "devDependencies": {
     "chai": "^4.3.7"
